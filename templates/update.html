@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <form action="/update" method="POST">
+        {% csrf_token %}
+        <h1>Update Employee</h1>
+        <p>Update the details of the employee</p>
+        <label id="id" for="id">ID</label>
+        <input type="text" name="id" id="id" value="{{employee.id}}" readonly>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{employee.name}}">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" value="{{employee.email}}">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" value="{{employee.phone}}">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" value="{{employee.dob}}">
+        <input type="hidden" name="id" value="{{employee.id}}">
+        <input type="submit" value="Update">
+</body>
+</html>

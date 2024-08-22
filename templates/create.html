@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form container */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Form labels */
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        /* Form inputs */
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        /* Submit button */
+        form input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Submit button hover effect */
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+            }
+
+            form input[type="submit"] {
+                font-size: 14px;
+            }
+    }
+
+    </style>
+
+</head>
+<body>
+    <form action="submit/">
+        
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" required>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" required>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" required>
+        <label for="emp_id">Employee ID</label>
+        <input type="text" name="emp_id" id="emp_id" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
